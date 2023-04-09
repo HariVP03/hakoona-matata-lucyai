@@ -1,74 +1,10 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+### How to run the server
+Following are the access keys required to run the servers. These variables go in the ```.env``` file in the project root. For now, the WhatsApp bot instance is not active all the time because of budget constraints. Contact this number if you want to test the bot, he will turn on the bot if you want to test it out on his number itself: ```+91 88104 32751```
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
+```env
+DATABASE_URL='mysql://r4srp9bei0bkracn2tq0:pscale_pw_ulixzFKGokaNxirJgJihuVxlcWgX236jdLD6zfMMfx6@ap-south.connect.psdb.cloud/sweety?ssl={"rejectUnauthorized":true}'
+WHATSAPP_API_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlZTMxMGQ2Ny05MWVhLTQzZmUtYTc4YS00MGFkZWM2ZmE3NzciLCJ1bmlxdWVfbmFtZSI6InNpZHNhaG5pMDBAZ21haWwuY29tIiwibmFtZWlkIjoic2lkc2FobmkwMEBnbWFpbC5jb20iLCJlbWFpbCI6InNpZHNhaG5pMDBAZ21haWwuY29tIiwiYXV0aF90aW1lIjoiMDMvMjQvMjAyMyAwNzo0MzowNiIsImRiX25hbWUiOiJ3YXRpX2FwcF90cmlhbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlRSSUFMIiwiZXhwIjoxNjgwMzA3MjAwLCJpc3MiOiJDbGFyZV9BSSIsImF1ZCI6IkNsYXJlX0FJIn0.2q6ZgUZV0BIcgxbbyHR176_xytFPfnM8CXKqBTnIIDY'
+OPENAI_API_KEY='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'
+GOOGLE_CREDENTIALS='"{\n  \"type\": \"service_account\",\n  \"project_id\": \"appbrew-web\",\n  \"private_key_id\": \"2649334135fbf8c1bdce2def5bfdc96f21f967c5\",\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCnMBsDTPvJfrS0\\nNElgvKk/6uEhsND8X06+fl8LjC35Gq0PLcgQOWrotEbEurc82eFaMuMlXhTlF0gw\\nQMD0xGlE+PdHKawTpJ8TrZyqAeRd/nzGwW7jmRBcy+k55ucMAb3NiAF+RYkP2tCc\\niHSFfFMen7AgqVTcqDIcbW9AWd9fVXjwW0ujtCfZ3+wlfWYs5IQ2eCmjr9kerPts\\n6bkvzAl3Ez31hkCP2LQyxc6NVkb027+fW1XzlI7zbucWqAdsKzQLzPW+DEIV9U4b\\nq93ohmhd/vcXEUDdKn8kLprGsUzGWU68EVljxdlu6nPMUoSarePeZM3ifQa+ZIDo\\nAdQV+59tAgMBAAECggEAGKk04tjBLyiceRRZWoaZpI795F1ThlZ8pAa5+FcWFO+F\\nZX7ISvRdO7QT2EL+cmBlKEvnS4TEKkKz6EI09CXgrUbYGswf0MnwmRN7z2v2BpNa\\nTmsL81CJpFaDsYHIxPGg0KdmKP0SyZ7qNJzAK0x6akL91OOFXAMHWUAfL+vR0hrp\\nNtdDlDS+CmGFjMMguULiFLZ7OtTEsBSg5AqRmY/EMkyOPCA/7kBoSAshVxWl7K77\\nBysZP0oAOTXxBeBXVyNwtLXTINsFpcqbJrVXbgm+b6OlaP+bU4tQ8wYZNbEp8N2u\\n7DmmXYV9PkrBmavRSBA4Enfk1JQmuRoyzyjzByDsgQKBgQDhxXW7twJEdg8pHMEa\\nCsdPIepKGGf0hWFY6drn3iVdpshApAfaKvkdria5gSKaOYHTTV+vLnIvov7cot6g\\nSslpcaoTzlOVADvyIcw63623MC1o1JG05kW8kuTq4Bd9jgN6iWivFbTS728We/Nf\\noIwAGgQDOH0iiyPg+SlqMF09zQKBgQC9kqPSudCS/N2bfTzamGR1/3x55gH3lx2V\\naYRoE57x4gQOl8pLolQsZLMr+ao1DTWLcholxEfASP3so3iMTFdjXzM55B5M1ArY\\nbrLMp2pG2B8Dh+FV6TZCEZCL3VKA6ZaVJaQfCEpq8wx2HbowtjF1G5Vt/ddyFU21\\niF305elIIQKBgQCWuEKjoUYDPClc0dRbtUxfGI4XDvn/NDfLqrq3xgZ94cSX2qlf\\nTQbneIZjmsDl4nQ4AtRY15HlGVQ5KQWkTqjtGrNm63vC4dgjCcsUlpSa0a/O5vGq\\nqXtuq0XlQtqLuA28dRUMpVoE41Du2qqbcUtlGfkJyWFIeUjnfI7YVBc7FQKBgQCc\\nRerohqbq1Kq2R/pHVQLTxuXM8w/CE3+esJom1a3cRe4EPZrU2J887VJKOQjXrOjr\\n6AaoBXMEjudMEMIKHdCYKV1oJqXXvaCnJDIexQ+2EOkYFwZptNM2iZY3xh4CCQ1K\\nK/psXoBCQ9OM9xqKl1aT7EY1ouDcubUSpbSWcoTpIQKBgQDBMuewXpqNF6pYf7qV\\n54Lu/yS8CP/L292gG3dNVHu3IwWIRa+EpZAqNhzyu3s9er7Mdqmz32Qxthdr9+rD\\n3zj7rqAbV9IZkbunw/pZNU1S+5tCBcmXRaVjQT7cpE6BDxpmSRxIJerxeJNc6YsM\\n/E6glbWDxLv3AJ2svJRrtMt+2A==\\n-----END PRIVATE KEY-----\\n\",\n  \"client_email\": \"sidharth@appbrew-web.iam.gserviceaccount.com\",\n  \"client_id\": \"116082256012953512849\",\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/sidharth%40appbrew-web.iam.gserviceaccount.com\"\n}\n"'
+SENDINBLUE_API_KEY=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
 ```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-# hakoona-matata-lucyai
